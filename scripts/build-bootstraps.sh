@@ -423,46 +423,46 @@ main() {
 		EXTRACTED_PACKAGES=()
 
 		# Package manager.
-		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
-			PACKAGES+=("apt")
-		fi
+		# if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
+		#		PACKAGES+=("apt")
+		# fi
 
 		# Core utilities.
-		PACKAGES+=("bash") # Used by `termux-bootstrap-second-stage.sh`
-		PACKAGES+=("bzip2")
-		if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
-			PACKAGES+=("command-not-found")
-		else
-			PACKAGES+=("proot")
-		fi
-		PACKAGES+=("coreutils")
-		PACKAGES+=("dash")
-		PACKAGES+=("diffutils")
-		PACKAGES+=("findutils")
-		PACKAGES+=("gawk")
-		PACKAGES+=("grep")
-		PACKAGES+=("gzip")
-		PACKAGES+=("less")
-		PACKAGES+=("procps")
-		PACKAGES+=("psmisc")
-		PACKAGES+=("sed")
-		PACKAGES+=("tar")
-		PACKAGES+=("termux-core")
-		PACKAGES+=("termux-exec")
-		PACKAGES+=("termux-keyring")
-		PACKAGES+=("termux-tools")
-		PACKAGES+=("util-linux")
+		# PACKAGES+=("bash") # Used by `termux-bootstrap-second-stage.sh`
+		# PACKAGES+=("bzip2")
+		# if ! ${BOOTSTRAP_ANDROID10_COMPATIBLE}; then
+		#		PACKAGES+=("command-not-found")
+		# else
+		#		PACKAGES+=("proot")
+		# fi
+		# PACKAGES+=("coreutils")
+		# PACKAGES+=("dash")
+		# PACKAGES+=("diffutils")
+		# PACKAGES+=("findutils")
+		# PACKAGES+=("gawk")
+		# PACKAGES+=("grep")
+		# PACKAGES+=("gzip")
+		# PACKAGES+=("less")
+		# PACKAGES+=("procps")
+		# PACKAGES+=("psmisc")
+		# PACKAGES+=("sed")
+		# PACKAGES+=("tar")
+		# PACKAGES+=("termux-core")
+		# PACKAGES+=("termux-exec")
+		# PACKAGES+=("termux-keyring")
+		# PACKAGES+=("termux-tools")
+		# PACKAGES+=("util-linux")
 
 		# Additional.
-		PACKAGES+=("ed")
-		PACKAGES+=("debianutils")
-		PACKAGES+=("dos2unix")
-		PACKAGES+=("inetutils")
-		PACKAGES+=("lsof")
-		PACKAGES+=("nano")
-		PACKAGES+=("net-tools")
-		PACKAGES+=("patch")
-		PACKAGES+=("unzip")
+		# PACKAGES+=("ed")
+		# PACKAGES+=("debianutils")
+		# PACKAGES+=("dos2unix")
+		# PACKAGES+=("inetutils")
+		# PACKAGES+=("lsof")
+		# PACKAGES+=("nano")
+		# PACKAGES+=("net-tools")
+		# PACKAGES+=("patch")
+		# PACKAGES+=("unzip")
 
 		# Handle additional packages.
 		for add_pkg in "${ADDITIONAL_PACKAGES[@]}"; do
@@ -483,7 +483,7 @@ main() {
 		extract_debs "$TERMUX_ARCH" || return $?
 
 		# Add termux bootstrap second stage files
-		add_termux_bootstrap_second_stage_files "$package_arch"
+		# add_termux_bootstrap_second_stage_files "$package_arch"
 
 		# Create bootstrap archive.
 		create_bootstrap_archive "$TERMUX_ARCH" || return $?
